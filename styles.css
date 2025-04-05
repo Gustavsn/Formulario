@@ -1,0 +1,65 @@
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    }
+
+    body {
+    background-color: #f9f9f9;
+    padding: 30px;
+    }
+
+    form {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+
+    fieldset {
+    border: 2px solid #009e7c;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    }
+
+    legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #009e7c;
+    }
+
+    label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    }
+  
+    input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+    }
+
+    button[type="submit"] {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #009e7c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    }
+    

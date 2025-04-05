@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="validacao.php" method="post">
+        <fieldset>
+        <legend>Cadastro</legend>
+
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome Completo: </label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email: </label>
+            <input type="email" name="email">
+
+            <div class="senha">
+            <label for="password">Senha:</label>
+            <input type="password" name="password" required>
+            
+            <label for="validacao_senha">Confirme a senha:</label>
+            <input type="validacao_senha" name="validacao_senha" required>
+            </div>
+
+            <label for="date">Data de nascimento:</label>
+            <input type="date" name="date" required>
+
+            <label for="opcao" >Gênero:</label>
+            <select name="opcao" id="opcao" required>
+            <option value="1">Masculino</option>
+            <option value="2">Feminino</option>
+            <option value="3">Outro</option>
+            <option value="4">Prefiro não informar</option>
+            </select>
+
+            <label for="phone">Número de telefone:
+            </label>
+            <input type="tel" name="phone" maxlength="11" pattern="\d{11}" required>
+            
+            <label for="cpf">CPF/CNPJ</label>
+            <input type="text"id="cpf" name="cpf" maxlength="11" pattern="\d{11}" required>
+        </fieldset> 
+
+        <fieldset>
+            <legend>Endereço</legend>
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+            </select>
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" name="cidade" required>
+
+            <label for="cep">CEP:</label>
+            <input type="number" name="cep" required>
+
+            <label for="endereco">Endereço</label>
+            <input type="text" name="endereco" required>
+
+            <label for="residencia">N°:</label>
+            <input type="number" name="residencia" required>
+
+            <label for="complemento">Complemento (opcional)</label>
+            <input type="text" name="complemento">
+
+            <label for="nacionalidade">Nacionalidade</label>
+            <input type="text" id="nacionalidade" name="nacionalidade" required>
+        </fieldset>
+
+        <fieldset>
+                <legend>Informações Adicionais</legend>
+            <label for="mae">Nome da Mãe</label>
+            <input type="text" name="mae">
+
+            <label for="pai">Nome do pai</label>
+            <input type="text" name="pai">
+        
+            <label for="estadocivil">Estado Civil:</label>
+            <select name="estadocivil" id="estadocivil" required>
+                <option value="1">Solteiro(a)</option>
+                <option value="2">Casado(a)</option>
+                <option value="3">Viúvo(a)</option>
+                <option value="4">Divorciado(a)</option>
+            </select>
+
+            <label for="escolaridade">Grau de escolaridade:</label>
+            <select name="escolaridade" id="escolaridade" required>
+                <option value="1">Fundamental</option>
+                <option value="2">Médio</option>
+                <option value="3">Superior</option>
+                <option value="4">Pós-graduação</option>
+            </select>
+
+            <label for="profissao">Profissão</label>
+            <input type="text" name="profissao">
+
+            <label for="renda">Renda mensal:</label>
+            <select name="renda" id="renda" required>
+                <option value="1">Até R$ 1500,00</option>
+                <option value="2">De R$ 1500,00 até R$ 3.000</option>
+                <option value="3">De R$ 3.000 até R$ 5.000</option>
+                <option value="4">Superior à R$ 5.000</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Perfil</legend>
+            <label for="foto">Foto de Perfil:</label>
+            <input type="file" id="imagem" name="imagem" accept="image/*">
+
+            <label for="conta">Tipo de conta:</label>
+            <select name="conta" id="conta" required>
+                <option value="1">Pessoal</option>
+                <option value="2">Empresarial</option>
+            </select>
+
+            <label for="social">Rede social (opcional)</label>
+            <select name="social" id="social">
+                <option value="1">Facebook</option>
+                <option value="2">Instagram</option>
+                <option value="3">Linkedin</option>
+            </select>
+            <label for="link_social">Link:</label>
+            <input type="url" id="link_social" name="link_social">
+
+            <label for="interesses">Interesses (escolha múltipla):</label>
+            <label><input type="checkbox" name="interesses[]" value="1"> Tecnologia</label>
+            <label><input type="checkbox" name="interesses[]" value="2"> Esportes</label>
+            <label><input type="checkbox" name="interesses[]" value="3"> Música</label>
+            <label><input type="checkbox" name="interesses[]" value="4"> Viagens</label>
+            <label><input type="checkbox" name="interesses[]" value="5"> Cinema</label>
+            <label><input type="checkbox" name="interesses[]" value="6"> Games</label>
+            <label><input type="checkbox" name="interesses[]" value="7"> Moda</label>
+
+            <label for="notific">Notificações por e-mail?</label>
+            <select name="notific" id="notific" required>
+                <option value="1">Sim</option>
+                <option value="2">Não</option>
+            </select>
+
+            <label for="contato">Preferencia para contato:</label>
+            <select name="contato" id="contato" required>
+                <option value="1">Whatsapp</option>
+                <option value="2">E-mail</option>
+                <option value="3">Telefone (ligação)</option>
+            </select>
+        </fieldset>
+
+        <div class="termo">
+       <p>Li e aceito os Termos de Uso e Condicões Gerais <br>
+        <label><input type="radio" name="termo" value="sim"> Sim.</label><br>
+        <label><input type="radio" name="termo" value="nao"> Não.</label><br>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+    </fieldset>
+    </form>
+</body>
+</html>
